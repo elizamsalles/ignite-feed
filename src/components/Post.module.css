@@ -1,0 +1,134 @@
+.post {
+    background-color: var(--gray-800);
+    border-radius: 8px;
+    padding: 40px;
+}
+
+.post + .post{ /*o sinal de +, vai fazer com que a estilização só ocorra no post, quando tiver outro post por cima*/
+    margin-top: 2rem;
+}
+
+.post header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.post header time {
+    font-size: 0.875rem;
+    color: var(--gray-400);
+}
+ 
+.post header .author {
+    display: flex;
+    align-items: center;
+    gap: 1rem; /*o gap faz com que as inf. do autor ficam lado a lado com a img (os dois estão na mesma div)*/
+}
+
+.post header .author img {
+    box-sizing: initial; /*isso faz com que a imagem não diminua de tamanho por causa das bordas */
+    width: 3.06rem;
+    height: 3.06rem;
+    border-radius: 8px;
+    border: 4px solid var(--gray-800);
+    outline: 2px solid var(--green-500);   
+}
+
+.post header .authorInfo {
+    display: flex;
+    flex-direction: column;
+}
+
+.post header strong {
+    color: var(--gray-100);
+    line-height: 1.6;
+}
+
+.post header span {
+    font-size: 0.875rem;
+    color: var(--gray-400);
+    line-height: 1.6;
+}
+
+/* estilização dos parágrafos*/
+                     
+.content p {
+    font-size: 1rem;
+    line-height: 25.6px;
+    font-weight: 400;
+    margin-top: 24px;
+}
+
+.content a {
+    color: var(--green-500);
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.content a:hover {
+    color: var(--green-400);
+}
+
+/*sessão dos comentários*/
+
+.commentSection {
+    width: 100%;
+    margin-top: 1.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--gray-600);
+}
+
+.commentSection strong {
+    font-weight: 700;
+    line-height: 26px;
+    color: var(--gray-100)
+
+}
+
+.commentSection textarea {
+    width: 100%;
+    height: 96px;
+    background-color: var(--gray-900);
+    border: none;
+    resize: none; /*isso faz com que o usuário não consiga redimensionar o tamanho*/
+    border-radius: 8px;
+    padding: 13px 16px;
+    margin-top: 16px;
+    line-height: 22px;
+    font-weight: 400;
+    color: var(--gray-300)
+
+}
+
+.commentSection footer { /*o botão só aparece quando o usuário digita, então dessa forma, ele fica escondido no footer até isso acontecer */
+    visibility: hidden;
+    max-height: 0;
+
+    transition: max-height 0.3s, opacity 0.3s;
+}
+
+.commentSection:focus-within footer { /*esse focus, funciona de forma que indica que quando for clicado no commentsection, ele muda o estado no botão(footer) para visible*/
+    visibility: visible;
+    opacity: 1;
+    max-height: 15rem;
+}
+
+
+.commentSection button {
+    background-color: var(--green-500);
+    padding: 16px 24px;
+    width: 108px;
+    height: 49px;
+    border-radius: 8px;
+    border: none;
+    margin-top: 16px;
+    color: var(--white);
+    font-weight: 700;
+    cursor: pointer;
+
+    
+}
+
+.commentSection button:hover {
+    background-color: var(--green-400);
+}

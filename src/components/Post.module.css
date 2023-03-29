@@ -104,13 +104,15 @@
     visibility: hidden;
     max-height: 0;
 
-    transition: max-height 0.3s, opacity 0.3s;
+    transition: max-height 0.2s, opacity 0.2s;
 }
 
 .commentSection:focus-within footer { /*esse focus, funciona de forma que indica que quando for clicado no commentsection, ele muda o estado no botão(footer) para visible*/
     visibility: visible;
     opacity: 1;
     max-height: 15rem;
+
+    transition: max-height 0.4s, opacity 0.4s;
 }
 
 
@@ -126,9 +128,13 @@
     font-weight: 700;
     cursor: pointer;
 
-    
+    transition: background-color 0.1s;
 }
 
 .commentSection button:hover {
     background-color: var(--green-400);
+}
+
+.commentList {
+    margin-top: 2rem;
 }

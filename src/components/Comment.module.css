@@ -12,6 +12,20 @@
 .commentBox {
     flex: 1; /* flex 1 faz com que o commentBox ocupe todo o espaço de largura (o comment tem que estar com display flex)  */
     margin-left: 1rem;
+    margin-bottom: 24px;
+}
+
+.commentContent {
+    background-color: var(--gray-700);
+    border-radius: 8px;
+    padding: 1rem;
+    
+}
+
+.commentContent p {
+    font-size: 14px;
+    margin-top: 16px;
+    color: var(--gray-300);
 }
 
 .authorAndTime {
@@ -33,10 +47,44 @@
     color: var(--gray-400);
 }
 
-button {
+.commentContent header button {
     background: transparent;
     border: none;
     color: var(--gray-400);
     cursor: pointer;
     line-height: 0; /*  deixa o ícone centralizado quando está em focus */
+    border-radius: 2px;
+}
+
+.commentContent header button:hover {
+    color: var(--red-500);
+}
+
+.commentBox footer {
+    margin-top: 16px;
+    
+}
+
+.commentBox footer button {
+    background: transparent;
+    border: 0;
+    color: var(--gray-400);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    border-radius: 2px;
+
+}
+
+.commentBox footer button:hover {
+    color: var(--green-400);
+}
+
+.commentBox footer button svg {
+    margin-right: 0.5rem;
+}
+
+.commentBox footer button span::before {
+    content: "\2022";
+    padding: 0 0.25rem;
 }

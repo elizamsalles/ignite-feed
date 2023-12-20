@@ -12,20 +12,10 @@
     object-fit: cover; /* dessa forma a imagem não será comprimida para caber no espaço, ela será cortada onde for necessário */
 }
 
-.avatar {
-    box-sizing: initial; /*isso faz com que a imagem não diminua de tamanho cpor causa das bordas */
-    width: 3.06rem;
-    height: 3.06rem;
-    border-radius: 8px;
-    border: 4px solid var(--gray-800);
-    outline: 2px solid var(--green-500);
-    display: block; 
-    margin: auto; 
-    position: relative; /*se não estivesse na posição relativa, a borda da imagem ficaria por trá da imagem cover */
-    margin-top: -2rem;
-}
+
 
 .profile {
+    margin-top: -15px;
     display: flex;
     flex-direction: column; /* assim o nome e o cargo ficam um abaixo do outro */
     align-items: center;

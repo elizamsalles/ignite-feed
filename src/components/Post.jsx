@@ -1,13 +1,14 @@
 import { ArrowBendDoubleUpLeft } from '@phosphor-icons/react';
 import { Comment } from './Comment';
 import styles from './Post.module.css';
+import { Avatar } from './Avatar';
 
 export function Post(props){
     return(
         <article className={styles.post}>
             <header>
                 <div className={styles.author}>
-                    <img src="https://yt3.ggpht.com/yti/AHXOFjXqYUtx1t9uu0P5RdwPzlpOep4gezDy9BzGTPSk=s108-c-k-c0x00ffffff-no-rj" />
+                    <Avatar src="https://yt3.ggpht.com/yti/AHXOFjXqYUtx1t9uu0P5RdwPzlpOep4gezDy9BzGTPSk=s108-c-k-c0x00ffffff-no-rj" />
                     <div className={styles.authorInfo}>
                         <strong>{props.author}</strong>
                         <span>Front-end Developer</span>

@@ -3,11 +3,7 @@
     justify-content: space-between;
 }
 
-.comment img {
-    width: 3.12rem;
-    height: 3.12rem;
-    border-radius: 8px;
-}
+
 
 .commentBox {
     flex: 1; /* flex 1 faz com que o commentBox ocupe todo o espaço de largura (o comment tem que estar com display flex)  */
